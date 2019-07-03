@@ -1,0 +1,27 @@
+search:
+  - locator: android.widget.EditText
+    by: class name
+    action: sendkeys
+    text: $var1
+
+addToSelected:
+  - locator: //*[contains(@resource-id, 'stockCode') and contains(@text,'$var1')]/../../..//*[contains(@resource-id, 'follow_btn')]
+    by: xpath
+    action: click
+
+removeFromSelected:
+  - locator: //*[contains(@resource-id, 'stockCode') and contains(@text,'$var1')]/../../..//*[contains(@resource-id, 'followed_btn')]
+    by: xpath
+    action: click
+
+isInSelected:
+  - locator: //*[contains(@resource-id, 'stockCode') and contains(@text,'$var1')]/../../..//*[contains(@resource-id, 'follow')]
+    by: xpath
+    action: get_attribute
+    attribute: resourceId
+
+
+cancel:
+  - locator: //*[@text="取消"]
+    by: xpath
+    action: click

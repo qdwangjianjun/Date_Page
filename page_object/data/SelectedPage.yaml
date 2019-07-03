@@ -1,0 +1,10 @@
+gotoHS:
+  - locator: //*[@text='沪深']
+    by: xpath
+    action: click
+
+getPriceByName:
+  - locator: //*[contains(@resource-id, 'stockName') and @text='$var1']/../../..//*[contains(@resource-id, 'currentPrice')]
+    by: xpath
+    action: get_attribute
+    attribute: text

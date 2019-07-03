@@ -1,0 +1,30 @@
+platform: Android
+
+install_app:
+  caps:
+    Android:
+      platformName: android
+      deviceName: hogwarts
+      appPackage: com.xueqiu.android
+      appActivity: .view.WelcomeActivityAlias
+      autoGrantPermissions: true
+      unicodeKeyboard: true
+      resetKeyboard: true
+    IOS:
+       {}
+
+
+
+restart_app:
+  caps:
+    Android:
+      platformName: android
+      deviceName: hogwarts
+      appPackage: com.xueqiu.android
+      appActivity: .view.WelcomeActivityAlias
+      autoGrantPermissions: true
+      noReset: true
+      unicodeKeyboard: true
+      resetKeyboard: true
+    IOS:
+       {}
